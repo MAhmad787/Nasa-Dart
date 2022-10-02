@@ -1,0 +1,93 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #2d3436;
+  padding: 4rem;
+  animation: jitter 0.5s ease-in-out forwards;
+  animation-delay: 3.2s;
+}
+.header {
+  width: 100%;
+  height: 20vh;
+  display: grid;
+  place-content: center;
+  border: 3px solid goldenrod;
+  h1 {
+    font-size: 4rem;
+  }
+}
+.showcase {
+  width: 90%;
+  height: 80vh;
+  padding-inline: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.anime {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  animation: moon 3s linear;
+  animation-delay: 1s;
+}
+
+@keyframes moon {
+  0% {
+    left: -100%;
+    top: -10%;
+    background: url("../moon.gif") no-repeat;
+  }
+  70% {
+    background: url("../moon.gif") no-repeat;
+  }
+  73% {
+    left: 80%;
+    top: 30%;
+    background: url("../blast.gif") no-repeat;
+    scale: 1.4;
+  }
+}
+@keyframes jitter {
+  0% {
+    color: red;
+  }
+  20% {
+    translate: -40px;
+    rotate: 4deg;
+    background-color: red;
+    color: white;
+  }
+  40% {
+    translate: 40px;
+    rotate: -4deg;
+    background-color: #2d3436;
+    color: red;
+  }
+
+  60% {
+    translate: 20px;
+    rotate: 2deg;
+    background-color: red;
+    color: white;
+  }
+  80% {
+    translate: -20px;
+    rotate: -2deg;
+    background-color: #fff;
+    color: red;
+  }
+  100% {
+    translate: 0px 60px;
+    rotate: 4deg;
+    background-color: #2d3436;
+    color: white;
+  }
+}
